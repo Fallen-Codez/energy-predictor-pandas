@@ -11,7 +11,7 @@ from sklearn.metrics import mean_squared_error
 warnings.filterwarnings('ignore')
 
 # synthetic data for features; honestly kaggle this at some point
-np.random.seed(0)  # reproducibility and adding to make it predictable
+np.random.seed(0)  # reproducibility and predictability 
 data_size = 500
 data = {
     'Wall_Area': np.random.randint(200, 400, data_size),
