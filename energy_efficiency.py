@@ -16,13 +16,12 @@ data_size = 500
 data = {
     'Wall_Area': np.random.randint(200, 400, data_size),
     'Roof_Area': np.random.randint(100, 200, data_size),
-    'Height': np.random.uniform(3, 10, data_size),  # Formerly OverallHeight
-    'Glazing': np.random.uniform(0, 1, data_size),  # Shortened from GlazingArea
+    'Height': np.random.uniform(3, 10, data_size),
+    'Glazing': np.random.uniform(0, 1, data_size),
     'Energy_Efficiency': np.random.uniform(10, 50, data_size)  # Energy efficiency rating
 }
 df = pd.DataFrame(data)
 
-# Data preprocessing
 X = df.drop('Energy_Efficiency', axis=1)
 y = df['Energy_Efficiency']
 
